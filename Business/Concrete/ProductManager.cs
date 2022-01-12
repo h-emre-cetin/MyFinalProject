@@ -145,14 +145,15 @@ namespace Business.Concrete
         [TransactionScopeAspect]
         public IResult AddTransactionalTest(Product product)
         {
-            Add(product);
-            if (product.UnitPrice<10)
-            {
-                throw new Exception("");
-            }
+            _productDal.Update(product);
+            _productDal.Add(product);
+            return new SuccessResult(Messages.ProductUpdated);
+        }
 
-            Add(product);
-            return null;
+        public IResult Delete(Product product)
+        {
+            _productDal.Delete(product);
+            return new SuccessResult("deleted");
         }
     }
 }

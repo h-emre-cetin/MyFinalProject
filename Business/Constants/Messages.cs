@@ -19,7 +19,7 @@ namespace Business.Constants
         public static string ProductCountOfCategoryError = "One Category must have lower than 10 products!";
         public static string ProductNameAlreadyExists = "Product Name Already Exists!";
         public static string CategoryLimitExceded = "Category Limit Has Exceded! Unable to add new product!";
-
+        public static string ProductUpdated = "Product Updated";
 
         public static string UserNotFound = "User not found";
         public static string PasswordError = "Password incorrect";
@@ -30,5 +30,7 @@ namespace Business.Constants
 
 
         public static string AuthorizationDenied = "No Permission!";
+
+        
     }
 }
